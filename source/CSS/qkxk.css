@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.qkxk_card {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    background-color: #fff;
+    border-radius: 4px;
+    will-change: transform
+}
+
+.qkxk_card:hover {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+    -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .12)
+}
+
+.qkxk_blog-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 350px;
+    overflow: hidden;
+}
+
+.qkxk_movie-item__header {
+    position: relative;
+    width: 30%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.qkxk_movie-item__content__name {
+    /* text-align: center; */
+    /* overflow: hidden; */
+    line-height: 1.4;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.qkxk_blocker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #999;
+    font-size: .9rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    /* justify-content: center; */
+    cursor: default;
+}
+
+.qkxk_day-item__main {
+    /* margin-top: 40px; */
+    /* padding: 16px; */
+    line-height: 1.5;
+}
+
+.qkxk_blog-item__main__title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    /* padding-bottom: 5px; */
+    /* overflow: hidden; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .qkxk_blog-item {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
+
+    .qkxk_movie-item__header {
+        width: 100%;
+        height: 350px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 350px;
+        flex: 0 0 350px;
+        -webkit-box-ordinal-group: 1 !important;
+        -ms-flex-order: 0 !important;
+        order: 0 !important;
+    }
+}
+
+.chart-small {
+    width: 223px;
+    height: 200px;
+    -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    padding: 20px;
+    margin: 5px;
+}
+
+@media (max-width: 923px) {
+    .chart-small {
+        width: 48%;
+    }
+}
+
+@media (max-width: 532px) {
+    .chart-small {
+        width: 45%;
+    }
+}
+
+.chart-big {
+    width: 49%;
+    height: 480px;
+    -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    padding: 20px;
+    margin: 5px;
+
+}
+
+@media (max-width: 1256px) {
+    .chart-big {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*------------------------ 表格--------------------*/
+.qkxk_table {
+    /* border: 1px solid #eee; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    table-layout: inherit;
+    font-size: 16px;
+    color: #606266;
+}
+
+.qkxk_table tr {
+    padding: 5px;
+}
+
+.qkxk_table th,
+.qkxk_table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.qkxk_table th {
+    text-transform: uppercase;
+    /* font-size: 14px; */
+    letter-spacing: 1px;
+}
+
+.qkxk_table thead {
+    color: #909399;
+    font-weight: bold;
+    text-align: left;
+}
+
+.qkxk_table thead tr {
+    border-bottom: 1px solid #ebeef5
+}
+
+.qkxk_table thead tr th {
+    border: none;
+    padding: 10px 6px;
+
+}
+
+
+
+.qkxk_table tbody tr {
+    border-bottom: 1px solid #ebeef5;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.qkxk_table tbody tr td {
+    padding: 10px 6px;
+    font-weight: 400;
+
+}
+
+
+
+.qkxk_table tbody tr:hover {
+    background-color: #ebeef580
+}
+
+@media screen and (min-width:600px) {
+    .qkxk_card_table {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+        box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+        background-color: #fff;
+        border-radius: 4px;
+        will-change: transform;
+        padding: 1rem 1rem 1.6rem 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .qkxk_table {
+        border: 0;
+    }
+
+    .qkxk_table thead {
+        display: none;
+    }
+
+    .qkxk_table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .qkxk_table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .qkxk_table td:last-child {
+        border-bottom: 0;
+    }
+
+    .qkxk_table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .qkxk_table tbody tr td:not(:first-child) {
+        border-left: 0px solid #ebeef5;
+        /* margin-left: 6px  */
+    }
+}
+
+/*------------------------ 表格bottom--------------------*/
+.qkxk-fab-fixed2 {
+    position: fixed !important;
+    /* 手机平板上距离屏幕右下角 16px */
+    right: 16px;
+    bottom: 66px;
+    outline: none;
+    -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);
+}
+
+@media (min-width: 1024px) {
+    .qkxk-fab-fixed2 {
+        /* 电脑上距离屏幕右下角 24px */
+        right: 24px;
+        bottom: 74px;
+    }
+
+}
+
+@media (max-width:575px){
+    .auto-blocker{
+        display: none;
+    }
+}
+.qkxk_common-item__main__info__detail {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

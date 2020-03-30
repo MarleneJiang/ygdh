@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="Author" content="Noah">
+    <meta name="Keywords" content="中学,高级中学,导航">
+    <meta name="Description" content="宁波市鄞州高级中学的学生导航网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="css/normalize.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/mdui.min.css">
+    <link rel="stylesheet" href="CSS/shareman.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/qkxk.css">
+    <link rel="stylesheet" href="CSS/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1664784_fh6z1wn0uqp.css">
+    <script src="JS/echarts.min.js"></script>
+    <script src="JS/macarons.js"></script>
+    <link rel="favicon" href="favicon.ico">
+    <title>鄞高导航</title>
+</head>
+
+<body class="mdui-color-white ">
+    <header class="header container-xl mdui-color-theme " mdui-headroom
+        style="border-radius: 0 0 15px 15px;max-width: 700px;">
+
+        <div class="header__main mdui-color-white mdui-ripple mdui-ripple-black">
+            <div class="logo" id="logo" style="margin-left:auto;margin-right: auto;"><img src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330145929.png"
+                    alt="logo" style="height:60px;" draggable="false">
+            </div>
+        </div>
+
+        <div class="header__menu mdui-color-theme">
+            <div class="menu">
+                <!---->
+                <div class="menu--horizontal ">
+                    <div id="headerHorizontalMenu" class="menu--horizontal__content ">
+                        <div class="menu--horizontal__content__item  menu--horizontal__content__item--active"><a
+                                href="/" class=""><i class="iconfont icon-iconfont icon-schedule"></i>
+                                首页
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a href="/develop.html" class=""><i
+                                    class="iconfont icon-iconfont icon-post"></i>
+                                发展
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a  class=""><i
+                                    class="iconfont icon-iconfont icon-bulb"></i>
+                                个性
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a  class=""><i
+                                    class="iconfont icon-iconfont icon-work"></i>
+                                学习
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav class="sidebar layout-sidebar mdui-color-theme">
+        <div class="sidebar__container">
+            <div class="menu">
+                <div class="menu--vertical">
+                    <div class="menu--vertical__item ">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-schedule"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            首页
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item menu--vertical__item--active">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-post"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            发展
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-bulb"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            个性
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-work"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            学习
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="view" id="top">
+
+        <main class="main layout-main">
+            <div class="LayoutContainer" style="max-width:1800px;padding:0;">
+
+                <nav>
+                    <div class="category-box"><a href="/develop.html" class="category-box__item ">
+                            导航
+                        </a> <a href="/info.html"
+                            class="category-box__item nuxt-link-exact-active nuxt-link-active category-box__item--active">
+                            信息
+                        </a></div>
+                </nav>
+                <div class="blocker" style="height:20px;width:100%;">
+                    <!---->
+                </div>
+                <section>
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            综合素养
+                            <span>comprehensive quality</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+
+                    <div style="display: flex;flex-wrap: wrap;text-align:center;justify-content:center;">
+
+                        <div id="chinese" class="chart-small"></div>
+                        <script type="text/javascript" data-chinese>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_chinese = echarts.init(document.getElementById('chinese'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目1}}',
+                                value: {{数_据1}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+                                ['#389af4', '#dfeaff']
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据1}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_chinese.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_chinese.resize();
+                            });
+                        </script>
+                        <div id="math" class="chart-small"></div>
+                        <script type="text/javascript" data-math>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_math = echarts.init(document.getElementById('math'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目2}}',
+                                value: {{数_据2}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+
+                                ['#ff8c37', '#ffdcc3']
+
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据2}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_math.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_math.resize();
+                            });
+                        </script>
+                        <div id="english" class="chart-small"></div>
+                        <script type="text/javascript" data-english>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_english = echarts.init(document.getElementById('english'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目3}}',
+                                value: {{数_据3}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+
+                                ['#ffc257', '#ffedcc']
+
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据3}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_english.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_english.resize();
+                            });
+                        </script>
+                        <div id="physics" class="chart-small"></div>
+                        <script type="text/javascript" data-physics>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_physics = echarts.init(document.getElementById('physics'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目4}}',
+                                value: {{数_据4}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+
+                                ['#fd6f97', '#fed4e0']
+
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据4}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_physics.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_physics.resize();
+                            });
+                        </script>
+                        <div id="geography" class="chart-small"></div>
+                        <script type="text/javascript" data-geography>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_geography = echarts.init(document.getElementById('geography'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目5}}',
+                                value: {{数_据5}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+
+                                ['#a181fc', '#e3d9fe']
+
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据5}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_geography.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_geography.resize();
+                            });
+                        </script>
+                        <div id="technology" class="chart-small"></div>
+                        <script type="text/javascript" data-technology>
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart_technology = echarts.init(document.getElementById('technology'));
+
+                            // 指定图表的配置项和数据
+                            var data = [{
+                                name: '{{科_目6}}',
+                                value: {{数_据6}}
+                            }]
+
+                            var titleArr = [],
+                                seriesArr = [];
+                            colors = [
+
+                                ['#15d315', '#93f393']
+
+                            ]
+                            data.forEach(function (item, index) {
+                                titleArr.push({
+                                    text: item.name,
+                                    left: '49%',
+                                    top: '56%',
+                                    textAlign: 'center',
+                                    textStyle: {
+                                        fontWeight: 'normal',
+                                        fontSize: '16',
+                                        color: colors[index][0],
+                                        textAlign: 'center',
+                                    },
+                                });
+                                seriesArr.push({
+                                    name: item.name,
+                                    type: 'pie',
+                                    clockWise: false,
+                                    radius: [60, 70],
+                                    itemStyle: {
+                                        normal: {
+                                            color: colors[index][0],
+                                            shadowColor: colors[index][0],
+                                            shadowBlur: 0,
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            },
+                                        }
+                                    },
+                                    hoverAnimation: false,
+
+                                    data: [{
+                                        value: '{{数_据6}}',
+                                        label: {
+                                            normal: {
+                                                formatter: function (params) {
+                                                    return params.value + '分';
+                                                },
+                                                position: 'center',
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold',
+                                                    color: colors[index][0]
+                                                }
+                                            }
+                                        },
+                                    }, {
+                                        value: 100 - item.value,
+                                        name: 'invisible',
+                                        itemStyle: {
+                                            normal: {
+                                                color: colors[index][1]
+                                            },
+                                            emphasis: {
+                                                color: colors[index][1]
+                                            }
+                                        }
+                                    }]
+                                })
+                            });
+
+
+                            option = {
+                                backgroundColor: "#fff",
+                                title: titleArr,
+                                series: seriesArr
+                            }
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart_technology.setOption(option);
+                            window.addEventListener("resize", function () {
+                                myChart_technology.resize();
+                            });
+                        </script>
+
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row"
+                            style="display: flex;flex-wrap: wrap;text-align:center;justify-content:center;">
+                            <div id="mixed-ability" class="chart-big"></div>
+                            <script type="text/javascript" data-mixed-ability>
+                                // 基于准备好的dom，初始化echarts实例
+                                var myChart_mix_ability = echarts.init(document.getElementById('mixed-ability'),
+                                    'macarons');
+
+                                // 指定图表的配置项和数据
+
+
+                                option = {
+                                    title: {
+                                        text: '',
+                                    },
+                                    radar: {
+                                        indicator: [{
+                                                name: '师生',
+                                                max: 80
+                                            },
+                                            {
+                                                name: '行为',
+                                                max: 15
+                                            },
+                                            {
+                                                name: '公益',
+                                                max: 24
+                                            },
+                                            {
+                                                name: '跑操',
+                                                max: 10
+                                            },
+                                            {
+                                                name: '体育',
+                                                max: 100
+                                            },
+                                            {
+                                                name: '体质',
+                                                max: 100
+                                            },
+                                            {
+                                                name: '生涯',
+                                                max: 10
+                                            },
+                                            {
+                                                name: '实践',
+                                                max: 10
+                                            },
+                                            {
+                                                name: '实验',
+                                                max: 10
+                                            },
+                                            {
+                                                name: '美术',
+                                                max: 100
+                                            },
+                                            {
+                                                name: '音乐',
+                                                max: 100
+                                            },
+                                        ],
+                                        center: ['50%', '50%'],
+                                        radius: '60%'
+                                    },
+
+                                    series: [{
+                                        type: 'radar',
+                                        zlevel: 2,
+                                        tooltip: {
+                                            show: true
+                                        },
+                                        lineStyle: {
+                                            width: 1,
+                                            opacity: 1
+                                        },
+                                        areaStyle: {
+                                            normal: {}
+                                        },
+                                        data: [{
+                                                value: [{{师生}}, {{行为}},{{公益}}, {{跑操}}, 0, 0, 0, 0, 0, 0, 0],
+                                            },
+                                            {
+                                                value: [0, 0, 0, {{跑操}},{{体育}}, {{体质}}, 10, 0, 0, 0, 0],
+                                            },
+                                            {
+                                                value: [0, 0, 0, 0, 0, 0, 10, 10, 10, {{美术}}, 0],
+                                            },
+                                            {
+                                                value: [{{师生}}, 0, 0, 0, 0, 0, 0, 0, 0, {{美术}}, {{音乐}}],
+                                            },
+
+                                        ]
+                                    }, {
+                                        type: 'sunburst',
+                                        center: ['50%', '50%'],
+                                        nodeClick: false,
+                                        levels: [{},
+                                            {
+                                                r0: '80%',
+                                                r: '90%',
+                                            }
+                                        ],
+                                        data: [{
+                                                name: '艺术素养',
+                                                value: 4,
+                                                label: {
+                                                    position: 'inside',
+                                                    rotate: 'tangential'
+                                                }
+                                            },
+                                            {
+                                                name: '创新实践',
+                                                value: 4,
+                                                label: {
+                                                    position: 'inside',
+                                                    rotate: 'tangential'
+                                                }
+                                            },
+                                            {
+                                                name: '运动健康',
+                                                value: 4,
+                                                label: {
+                                                    position: 'inside',
+                                                    rotate: 'tangential'
+                                                }
+                                            },
+                                            {
+                                                name: '品德表现',
+                                                value: 4,
+                                                label: {
+                                                    position: 'inside',
+                                                    rotate: 'tangential'
+                                                }
+                                            },
+                                        ],
+
+                                    }]
+                                };
+                                // 使用刚指定的配置项和数据显示图表。
+                                myChart_mix_ability.setOption(option);
+                                window.addEventListener("resize", function () {
+                                    myChart_mix_ability.resize();
+                                });
+                            </script>
+                            <div id="academic" class="chart-big"></div>
+                            <script type="text/javascript" data-academic>
+                                // 基于准备好的dom，初始化echarts实例
+                                var myChart_academic = echarts.init(document.getElementById('academic'));
+
+                                // 指定图表的配置项和数据
+                                option = {
+                                tooltip: {
+                                trigger: 'axis'
+                                },
+                                legend: {
+                                color: ["#F58080", "#47D8BE", "#F9A589"],
+                                data: ['总分','语文', '数学', '英语', '物理', '地理', '技术'],
+                                left: 'center',
+                                bottom: 'bottom'
+                                },
+                                grid: {
+                                top: 'middle',
+                                left: '3%',
+                                right: '4%',
+                                bottom: '3%',
+                                height: '80%',
+                                containLabel: true
+                                },
+                                xAxis: {
+                                type: 'category',
+                                data: {{学期}},
+                                axisLine: {
+                                lineStyle: {
+                                color: "#999"
+                                }
+                                }
+                                },
+                                yAxis: {
+                                type: 'value',
+                                min:'dataMin',
+                                max:'dataMax',
+                                splitLine: {
+                                lineStyle: {
+                                type: 'dashed',
+                                color: '#DDD'
+                                }
+                                },
+                                axisLine: {
+                                show: false,
+                                lineStyle: {
+                                color: "#333"
+                                },
+                                },
+                                nameTextStyle: {
+                                color: "#999"
+                                },
+                                splitArea: {
+                                show: false
+                                }
+                                },
+                                series: [
+                                {
+                                name: '{{科目7}}',
+                                type: 'line',
+                                data: [{{数据7}}],
+                                color: "#3CD500",
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#73ff00' // 0% 处的颜色
+                                }, {
+                                offset: 0.4,
+                                color: '#3CD500' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#3CD500' // 100% 处的颜色
+                                }],
+                                globalCoord: false // 缺省为 false
+                                },
+                                //shadowColor: 'rgba(245,128,128, 0.5)',
+                                //shadowBlur: 10,
+                                //shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#73ff00',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(72,216,191, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#73ff00"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目1}}',
+                                type: 'line',
+                                data: [{{数据1}}],
+                                color: "#F58080",
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#FFCAD4' // 0% 处的颜色
+                                }, {
+                                offset: 0.4,
+                                color: '#F58080' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#F58080' // 100% 处的颜色
+                                }],
+                                globalCoord: false // 缺省为 false
+                                },
+                                //shadowColor: 'rgba(245,128,128, 0.5)',
+                                //shadowBlur: 10,
+                                //shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#F58080',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(72,216,191, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#F58080"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目2}}',
+                                type: 'line',
+                                data: [{{数据2}}],
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#AAF487' // 0% 处的颜色
+                                },
+                                {
+                                offset: 0.4,
+                                color: '#47D8BE' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#47D8BE' // 100% 处的颜色
+                                }
+                                ],
+                                globalCoord: false // 缺省为 false
+                                },
+                                // shadowColor: 'rgba(71,216,190, 0.5)',
+                                // shadowBlur: 10,
+                                // shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#AAF487',
+                                borderWidth: 10,
+                                /*shadowColor: 'rgba(72,216,191, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#AAF487"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目3}}',
+                                type: 'line',
+                                data: [{{数据3}}],
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#F6D06F' // 0% 处的颜色
+                                },
+                                {
+                                offset: 0.4,
+                                color: '#F9A589' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#F9A589' // 100% 处的颜色
+                                }
+                                ],
+                                globalCoord: false // 缺省为 false
+                                },
+                                // shadowColor: 'rgba(249,165,137, 0.5)',
+                                // shadowBlur: 10,
+                                // shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#F6D06F',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(194,53,49, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#F6D06F"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目4}}',
+                                type: 'line',
+                                data: [{{数据4}}],
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#dfeaff' // 0% 处的颜色
+                                },
+                                {
+                                offset: 0.4,
+                                color: '#389af4' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#389af4' // 100% 处的颜色
+                                }
+                                ],
+                                globalCoord: false // 缺省为 false
+                                },
+                                // shadowColor: 'rgba(56, 154, 244, 0.5)',
+                                // shadowBlur: 10,
+                                // shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#98b9f7',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(194,53,49, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#98b9f7"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目5}}',
+                                type: 'line',
+                                data: [{{数据5}}],
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#e3d9fe' // 0% 处的颜色
+                                },
+                                {
+                                offset: 0.4,
+                                color: '#a181fc' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#a181fc' // 100% 处的颜色
+                                }
+                                ],
+                                globalCoord: false // 缺省为 false
+                                },
+                                // shadowColor: 'rgba(161, 129, 252, 0.5)',
+                                // shadowBlur: 10,
+                                // shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#c6b1fd',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(194,53,49, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#c6b1fd"
+                                }
+                                },
+                                smooth: true
+                                },
+                                {
+                                name: '{{科目6}}',
+                                type: 'line',
+                                data: [{{数据6}}],
+                                lineStyle: {
+                                normal: {
+                                width: 5,
+                                color: {
+                                type: 'linear',
+
+                                colorStops: [{
+                                offset: 0,
+                                color: '#f5f83f' // 0% 处的颜色
+                                },
+                                {
+                                offset: 0.4,
+                                color: '#e1e438' // 100% 处的颜色
+                                }, {
+                                offset: 1,
+                                color: '#e1e438' // 100% 处的颜色
+                                }
+                                ],
+                                globalCoord: false // 缺省为 false
+                                },
+                                // shadowColor: 'rgba(225, 228, 56, 0.5)',
+                                // shadowBlur: 10,
+                                // shadowOffsetY: 7
+                                }
+                                },
+                                itemStyle: {
+                                normal: {
+                                color: '#d9db39',
+                                borderWidth: 5,
+                                /*shadowColor: 'rgba(194,53,49, 0.3)',
+                                shadowBlur: 100,*/
+                                borderColor: "#d9db39"
+                                }
+                                },
+                                smooth: true
+                                },
+                                ]
+                                };
+                                // 使用刚指定的配置项和数据显示图表。
+                                myChart_academic.setOption(option);
+                                window.addEventListener("resize", function () {
+                                    myChart_academic.resize();
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+
+
+                </section>
+                <div class="blocker" style="height:40px;width:100%;">
+                    <!---->
+                </div>
+                <section>
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            品行监测
+                            <span>Conduct monitoring</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+                    <div class="blocker" style="height:18px;width:100%;">
+                        <!---->
+                    </div>
+                    <div class="qkxk_card_table">
+
+                        <table class="qkxk_table">
+                            <thead>
+                                <tr>
+                                    <th>学期</th>
+                                    <th>9月/2月</th>
+                                    <th>10月/3月</th>
+                                    <th>11月/4月</th>
+                                    <th>12月/5月</th>
+                                    <th>1月/6月</th>
+                                    <th>品行情况</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ajaxtbody">
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+                </section>
+                <div class="blocker" style="height:40px;width:100%;">
+                    <!---->
+                </div>
+                <section>
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            成长足迹
+                            <span>Growing Path</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+
+                    <div id="ajaxwaterfall" class="waterfall" style="column-count: 3; column-gap: 0px;">
+                       
+                    </div>
+
+                </section>
+            </div>
+        </main>
+
+
+
+
+
+        <footer id="bottom" class="footer">
+            <div class="LayoutContainer footer__container" style="max-width:1800px;padding:0;">
+                <div class="footer__container__page">
+                    <div class="footer__container__page__item">
+                        关于
+                    </div>
+                    <div class="footer__container__page__item">
+                        开发日志
+                    </div>
+                    <div class="footer__container__page__item">
+                        暂无备案
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini mdui-fab-fixed" id="fullbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);"
+                onclick="toggleFullScreen()">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-quanping" style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini qkxk-fab-fixed2" id="topbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-rising " style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+
+
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="JS/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $orders = $('#ajaxtbody');
+            var $orders1 = $('#ajaxwaterfall');
+            $.ajax({
+                type:'GET',
+                url:'/pinxing',
+                success:function(orders){
+                    $.each($.parseJSON(orders),function (i,order) {
+                        if(order.img_str=="/Public/img/greenlight.png"){
+                            $orders.append( '<tr><td data-label="学期">'+order.term_name+
+                        '</td><td data-label="9月/2月">'+order.month1+
+                        '</td><td data-label="10月/3月">'+order.month2+
+                        '</td><td data-label="11月/4月">'+order.month3+
+                        '</td><td data-label="12月/5月">'+order.month4+
+                        '</td><td data-label="1月/6月">'+order.month5+
+                        '</td><td data-label="品行情况"><svg t="1584272090926" class="icon" viewBox="0 0 1792 1024" version="1.1" p-id="5077" width="50" height="28.57"> <path'+ 
+                                                ' d="M64 0h1664a64 64 0 0 1 64 64v896a64 64 0 0 1-64 64H64a64 64 0 0 1-64-64V64a64 64 0 0 1 64-64z m216.704 204.096L246.208 237.184c51.392 39.424 91.52 76.736 121.088 111.936l35.904-35.2c-33.088-36.608-73.92-73.216-122.496-109.824z m411.84 621.632h159.808l11.968-50.688c-18.304 1.408-44.352 2.112-78.144 2.816-34.496 0.704-68.288 1.408-100.672 1.408-55.616 0-102.08-0.704-139.392-1.408-42.24-1.408-73.92-7.04-96.448-16.896-19.712-9.152-38.016-23.936-54.912-44.352a119.072 119.072 0 0 0-17.6-16.192V437.12H230.016v46.464h99.968V697.6c-28.864 12.672-61.952 48.576-99.264 107.712l38.016 34.496c38.72-64.768 66.88-97.152 83.776-97.152 8.448 0 17.6 5.632 27.456 17.6 21.824 25.344 47.168 42.944 75.328 51.392 28.16 7.744 65.472 11.968 111.232 12.672 45.056 0.704 87.296 1.408 126.016 1.408zM566.528 271.68l-30.976 30.272a838.72 838.72 0 0 1 92.224 56.32h-176V732.8h47.872v-123.2h117.568v121.088h47.168V609.6h118.272v52.8c0 15.488-8.448 23.936-25.344 23.936l-55.616-2.112 11.264 42.944h58.432c39.424 0 59.136-18.304 59.136-54.208v-314.688h-139.392l-11.264-9.152a769.6 769.6 0 0 0 137.28-95.04V217.472H436.288v42.944h312.576a669.376 669.376 0 0 1-101.376 64.064c-23.936-17.6-51.392-35.2-80.96-52.8z m-66.88 234.432h117.568v61.952h-117.568v-61.952z m164.736 0h118.272v61.952h-118.272v-61.952z m118.272-42.24h-118.272v-63.36h118.272v63.36z m-165.44 0h-117.568v-63.36h117.568v63.36z m365.376-261.184l-35.2 33.088c50.688 40.832 90.112 79.552 118.976 115.456l36.608-37.312c-32.384-36.608-72.512-73.92-120.384-111.232z m428.032 623.04h148.544l12.672-51.392c-16.896 1.408-41.536 2.112-73.216 2.816-32.384 0-63.36 0.704-94.336 0.704-57.728 0-106.304-0.704-145.024-1.408-43.648-1.408-77.44-6.336-99.968-15.488-20.416-9.856-39.424-24.64-57.728-44.352a120.832 120.832 0 0 0-18.304-16.192v-264h-149.952v47.872h101.376V697.6c-29.568 12.672-62.656 49.28-100.672 109.824l38.016 33.792c39.424-66.176 68.288-98.56 85.184-98.56 9.152 0 19.008 5.632 28.864 17.6 22.528 25.344 48.576 42.944 78.144 51.392 28.864 7.744 67.584 11.968 115.456 12.672 47.168 0.704 90.816 1.408 130.944 1.408z m-21.12-94.336c42.24 0 64.064-21.12 64.064-61.952v-311.168h104.192V308.288h-104.192V194.24h-51.392v114.048h-266.112v49.984h266.112v299.2c0 19.008-10.56 28.864-30.272 28.864-29.568 0-61.248-1.408-93.632-3.52l11.264 48.576h99.968zM1212.8 420.928l-39.424 25.344c42.944 51.392 76.736 97.856 102.08 140.096l40.832-28.16c-23.936-39.424-58.432-85.184-103.488-137.28z"'+
+                                                ' fill="#00A497" p-id="5078"></path> </svg></td></tr>')
+                        }
+                        else{
+                            $orders.append( '<tr><td data-label="学期">'+order.term_name+
+                        '</td><td data-label="9月/2月">'+order.month1+
+                        '</td><td data-label="10月/3月">'+order.month2+
+                        '</td><td data-label="11月/4月">'+order.month3+
+                        '</td><td data-label="12月/5月">'+order.month4+
+                        '</td><td data-label="1月/6月">'+order.month5+
+                        '</td><td data-label="品行情况"><svg t="1584272560639" class="icon" viewBox="0 0 3072 1024" version="1.1" p-id="14482" width="75" height="28.57"> <path d="M1657.173333 535.893333h146.773334v71.68h-146.773334zM1455.786667 535.893333h143.36v71.68h-143.36zM1802.24 426.666667c0-8.533333-3.413333-13.653333-11.946667-13.653334H1655.466667v66.56h146.773333V426.666667zM1599.146667 413.013333h-133.12c-3.413333 0-5.12 1.706667-6.826667 3.413334-1.706667 1.706667-3.413333 5.12-3.413333 10.24v52.906666h143.36v-66.56z"'+
+                                                ' fill="#F10215" p-id="14483"></path> <path d="M2971.306667 0H100.693333C46.08 0 0 46.08 0 100.693333V921.6c0 56.32 46.08 102.4 100.693333 102.4H2969.6c56.32 0 100.693333-46.08 100.693333-100.693333V100.693333c1.706667-54.613333-44.373333-100.693333-98.986666-100.693333z m-781.653334 298.666667c5.12-5.12 11.946667-6.826667 22.186667-6.826667H2508.8v-97.28c0-22.186667 10.24-32.426667 29.013333-32.426667 8.533333 0 17.066667 1.706667 22.186667 6.826667 5.12 5.12 8.533333 13.653333 8.533333 25.6v97.28h66.56c10.24 0 18.773333 1.706667 22.186667 6.826667 5.12 5.12 6.826667 11.946667 6.826667 20.48 0 10.24-1.706667 17.066667-6.826667 22.186666-5.12 5.12-11.946667 6.826667-22.186667 6.826667h-66.56v346.453333c0 18.773333-1.706667 34.133333-3.413333 47.786667-3.413333 13.653333-6.826667 23.893333-13.653333 30.72s-15.36 13.653333-27.306667 17.066667-25.6 5.12-42.666667 5.12c-20.48 0-44.373333-3.413333-68.266666-6.826667s-54.613333-11.946667-88.746667-22.186667c-15.36-5.12-23.893333-10.24-29.013333-17.066666-3.413333-6.826667-3.413333-15.36 0-27.306667 3.413333-10.24 10.24-17.066667 17.066666-18.773333s18.773333-1.706667 32.426667 3.413333c15.36 5.12 29.013333 8.533333 40.96 11.946667 11.946667 3.413333 22.186667 6.826667 32.426667 8.533333s18.773333 3.413333 27.306666 3.413333 17.066667 1.706667 25.6 1.706667c17.066667 0 27.306667-3.413333 32.426667-8.533333 5.12-5.12 6.826667-17.066667 6.826667-34.133334v-341.333333h-296.96c-18.773333 0-29.013333-10.24-29.013334-29.013333-1.706667-8.533333 0-15.36 5.12-20.48z m76.8 192.853333c-11.946667-15.36-25.6-34.133333-40.96-52.906667-8.533333-10.24-13.653333-18.773333-15.36-25.6-1.706667-6.826667 1.706667-13.653333 8.533334-20.48 8.533333-8.533333 17.066667-11.946667 25.6-11.946666s17.066667 6.826667 27.306666 18.773333c15.36 18.773333 29.013333 37.546667 40.96 52.906667 11.946667 17.066667 23.893333 32.426667 34.133334 46.08 10.24 15.36 20.48 29.013333 29.013333 44.373333 8.533333 15.36 18.773333 29.013333 27.306667 44.373333 10.24 17.066667 15.36 29.013333 13.653333 37.546667s-5.12 13.653333-13.653333 18.773333c-10.24 5.12-18.773333 6.826667-25.6 3.413334-6.826667-3.413333-15.36-13.653333-23.893334-29.013334-6.826667-13.653333-15.36-27.306667-23.893333-40.96-8.533333-13.653333-17.066667-27.306667-27.306667-40.96-11.946667-13.653333-22.186667-27.306667-35.84-44.373333z m-281.6-291.84c5.12-6.826667 11.946667-10.24 18.773334-10.24 6.826667 0 17.066667 3.413333 27.306666 11.946667 20.48 17.066667 39.253333 32.426667 58.026667 51.2 18.773333 17.066667 34.133333 34.133333 47.786667 51.2 8.533333 10.24 13.653333 18.773333 13.653333 25.6 0 6.826667-3.413333 13.653333-10.24 20.48-6.826667 6.826667-15.36 10.24-22.186667 8.533333-8.533333-1.706667-17.066667-8.533333-27.306666-18.773333-13.653333-15.36-29.013333-32.426667-44.373334-47.786667-17.066667-15.36-34.133333-30.72-51.2-44.373333-10.24-8.533333-17.066667-17.066667-17.066666-23.893334 0-10.24 1.706667-17.066667 6.826666-23.893333zM1397.76 428.373333c0-15.36 1.706667-29.013333 3.413333-37.546666 1.706667-8.533333 5.12-15.36 10.24-20.48 5.12-5.12 11.946667-8.533333 20.48-10.24 10.24-1.706667 20.48-1.706667 35.84-1.706667h133.12c-8.533333-3.413333-17.066667-6.826667-23.893333-10.24-6.826667-3.413333-15.36-6.826667-23.893333-10.24l-25.6-10.24c-8.533333-3.413333-18.773333-6.826667-30.72-11.946667-6.826667-3.413333-13.653333-6.826667-18.773334-13.653333-5.12-5.12-6.826667-13.653333-3.413333-22.186667 3.413333-10.24 8.533333-17.066667 17.066667-20.48 8.533333-3.413333 17.066667-3.413333 29.013333 1.706667l95.573333 42.666667c29.013333-10.24 52.906667-18.773333 73.386667-27.306667 20.48-8.533333 37.546667-15.36 54.613333-22.186667H1426.773333c-10.24 0-17.066667-1.706667-20.48-6.826666-3.413333-5.12-5.12-11.946667-5.12-20.48s1.706667-15.36 5.12-22.186667c3.413333-5.12 10.24-8.533333 22.186667-8.533333H1809.066667c13.653333 0 23.893333 3.413333 32.426666 10.24 8.533333 6.826667 11.946667 15.36 11.946667 25.6 0 6.826667-3.413333 15.36-8.533333 23.893333-5.12 8.533333-13.653333 15.36-25.6 20.48-18.773333 8.533333-39.253333 18.773333-61.44 29.013333-22.186667 10.24-46.08 20.48-69.973334 29.013334 8.533333 3.413333 15.36 8.533333 18.773334 11.946666 3.413333 3.413333 5.12 6.826667 6.826666 11.946667h78.506667c15.36 0 27.306667 1.706667 37.546667 3.413333 10.24 1.706667 17.066667 5.12 22.186666 10.24 5.12 5.12 8.533333 11.946667 10.24 22.186667 1.706667 8.533333 1.706667 20.48 1.706667 35.84v293.546667c0 27.306667-5.12 46.08-15.36 59.733333-10.24 11.946667-29.013333 18.773333-58.026667 18.773333-23.893333 0-52.906667-3.413333-87.04-11.946666-11.946667-3.413333-18.773333-8.533333-23.893333-13.653334-3.413333-5.12-3.413333-13.653333 0-27.306666 3.413333-10.24 8.533333-15.36 15.36-18.773334 6.826667-1.706667 17.066667-1.706667 25.6 0 15.36 3.413333 27.306667 6.826667 39.253333 10.24 11.946667 3.413333 20.48 3.413333 27.306667 3.413334s11.946667-1.706667 13.653333-6.826667 3.413333-11.946667 3.413334-22.186667v-51.2h-146.773334v110.933334c0 10.24-1.706667 17.066667-5.12 22.186666-3.413333 5.12-10.24 6.826667-22.186666 6.826667-10.24 0-18.773333-1.706667-22.186667-6.826667-5.12-5.12-6.826667-11.946667-6.826667-22.186666v-110.933334h-143.36v105.813334c0 10.24-1.706667 17.066667-6.826666 22.186666-5.12 3.413333-11.946667 6.826667-20.48 6.826667-10.24 0-17.066667-1.706667-22.186667-5.12-5.12-3.413333-6.826667-11.946667-6.826667-22.186667V428.373333zM1199.786667 175.786667c5.12-6.826667 11.946667-10.24 18.773333-10.24s15.36 5.12 27.306667 15.36c17.066667 15.36 35.84 30.72 54.613333 47.786666 18.773333 17.066667 35.84 34.133333 51.2 52.906667 8.533333 8.533333 11.946667 17.066667 13.653333 25.6 0 8.533333-3.413333 15.36-11.946666 23.893333-6.826667 5.12-13.653333 8.533333-22.186667 6.826667-6.826667-1.706667-15.36-8.533333-25.6-18.773333-5.12-6.826667-11.946667-13.653333-22.186667-23.893334-8.533333-8.533333-17.066667-18.773333-27.306666-27.306666-10.24-8.533333-18.773333-18.773333-27.306667-25.6-8.533333-8.533333-17.066667-15.36-23.893333-20.48-8.533333-6.826667-13.653333-13.653333-15.36-20.48-1.706667-6.826667 1.706667-15.36 10.24-25.6zM1128.106667 802.133333c-5.12 10.24-11.946667 15.36-20.48 13.653334s-20.48-5.12-34.133334-13.653334c-29.013333-17.066667-54.613333-32.426667-78.506666-49.493333-23.893333-17.066667-46.08-35.84-68.266667-54.613333s-42.666667-42.666667-63.146667-66.56c-20.48-23.893333-40.96-51.2-61.44-81.92v319.146666c0 10.24-3.413333 17.066667-8.533333 20.48-5.12 3.413333-11.946667 5.12-22.186667 5.12-8.533333 0-17.066667-1.706667-22.186666-5.12s-8.533333-10.24-8.533334-20.48V564.906667c-17.066667 27.306667-34.133333 51.2-54.613333 75.093333-18.773333 23.893333-40.96 46.08-63.146667 66.56-22.186667 20.48-47.786667 40.96-73.386666 59.733333s-54.613333 37.546667-85.333334 56.32c-10.24 6.826667-18.773333 10.24-27.306666 10.24s-15.36-3.413333-20.48-11.946666c-6.826667-10.24-10.24-18.773333-6.826667-27.306667 1.706667-8.533333 8.533333-15.36 20.48-22.186667 58.026667-30.72 109.226667-66.56 151.893333-107.52s81.92-85.333333 116.053334-136.533333H455.68c-10.24 0-18.773333-1.706667-22.186667-6.826667-3.413333-5.12-5.12-11.946667-5.12-22.186666 0-10.24 1.706667-18.773333 5.12-22.186667 3.413333-5.12 10.24-6.826667 22.186667-6.826667h285.013333V324.266667H491.52c-10.24 0-17.066667-1.706667-22.186667-6.826667-3.413333-5.12-6.826667-11.946667-6.826666-22.186667 0-10.24 1.706667-17.066667 6.826666-22.186666 3.413333-5.12 11.946667-6.826667 22.186667-6.826667h249.173333v-80.213333c0-10.24 3.413333-17.066667 8.533334-20.48 5.12-3.413333 11.946667-5.12 22.186666-5.12 8.533333 0 15.36 1.706667 22.186667 5.12 5.12 3.413333 8.533333 10.24 8.533333 20.48v80.213333h254.293334c18.773333 0 29.013333 10.24 29.013333 29.013333 0 20.48-10.24 29.013333-29.013333 29.013334h-256v143.36h286.72c10.24 0 17.066667 1.706667 22.186666 6.826666 5.12 5.12 6.826667 11.946667 6.826667 22.186667 0 10.24-1.706667 17.066667-6.826667 22.186667-5.12 5.12-11.946667 6.826667-22.186666 6.826666H853.333333c37.546667 51.2 78.506667 93.866667 121.173334 129.706667s87.04 68.266667 134.826666 93.866667c11.946667 '+
+                                                '6.826667 20.48 13.653333 23.893334 22.186666 1.706667 8.533333 0 18.773333-5.12 30.72z m769.706666 68.266667c-3.413333 3.413333-11.946667 6.826667-22.186666 6.826667h-358.4c-25.6 0-49.493333-1.706667-68.266667-3.413334s-37.546667-6.826667-52.906667-13.653333c-15.36-6.826667-30.72-15.36-44.373333-25.6s-27.306667-23.893333-39.253333-39.253333c-10.24 18.773333-22.186667 37.546667-37.546667 52.906666-15.36 15.36-32.426667 29.013333-47.786667 40.96-18.773333 11.946667-34.133333 10.24-44.373333-5.12-5.12-8.533333-6.826667-17.066667-5.12-23.893333 1.706667-6.826667 10.24-15.36 22.186667-22.186667 22.186667-13.653333 40.96-30.72 54.613333-52.906666 15.36-22.186667 22.186667-44.373333 22.186667-66.56V457.386667c0-6.826667-1.706667-10.24-6.826667-10.24h-69.973333c-10.24 0-18.773333-1.706667-22.186667-6.826667-3.413333-3.413333-5.12-11.946667-5.12-22.186667s1.706667-17.066667 5.12-22.186666c3.413333-5.12 10.24-6.826667 22.186667-6.826667h76.8c11.946667 0 20.48 1.706667 27.306666 3.413333 6.826667 1.706667 13.653333 5.12 17.066667 10.24 3.413333 5.12 6.826667 11.946667 8.533333 22.186667 1.706667 8.533333 3.413333 20.48 3.413334 35.84V725.333333c11.946667 18.773333 22.186667 34.133333 34.133333 46.08 11.946667 11.946667 25.6 22.186667 39.253333 29.013334 15.36 6.826667 30.72 11.946667 49.493334 13.653333 18.773333 1.706667 39.253333 3.413333 61.44 3.413333h358.4c11.946667 0 18.773333 1.706667 22.186666 6.826667 3.413333 5.12 5.12 11.946667 5.12 20.48 0 11.946667-1.706667 20.48-5.12 25.6z m762.88-5.12c-5.12 5.12-11.946667 8.533333-23.893333 8.533333H2355.2c-37.546667 0-68.266667-1.706667-95.573333-5.12-27.306667-3.413333-49.493333-10.24-69.973334-18.773333-18.773333-8.533333-37.546667-18.773333-51.2-32.426667-15.36-13.653333-29.013333-29.013333-40.96-49.493333-10.24 17.066667-23.893333 34.133333-40.96 49.493333-18.773333 17.066667-42.666667 34.133333-73.386666 51.2-22.186667 13.653333-37.546667 11.946667-44.373334-5.12-3.413333-8.533333-5.12-15.36-3.413333-23.893333 1.706667-6.826667 8.533333-15.36 22.186667-22.186667 39.253333-22.186667 66.56-44.373333 80.213333-64.853333 15.36-22.186667 22.186667-42.666667 22.186667-63.146667V472.746667c0-6.826667-3.413333-10.24-8.533334-10.24h-87.04c-11.946667 0-18.773333-1.706667-22.186666-6.826667-3.413333-5.12-5.12-11.946667-5.12-22.186667 0-10.24 1.706667-17.066667 5.12-22.186666 3.413333-5.12 11.946667-6.826667 22.186666-6.826667h98.986667c22.186667 0 35.84 5.12 42.666667 17.066667 6.826667 10.24 11.946667 29.013333 11.946666 54.613333v203.093333c10.24 23.893333 20.48 46.08 32.426667 63.146667s27.306667 30.72 44.373333 42.666667c18.773333 10.24 40.96 18.773333 66.56 23.893333 25.6 5.12 58.026667 6.826667 93.866667 6.826667h279.893333c11.946667 0 18.773333 3.413333 23.893334 8.533333 5.12 5.12 6.826667 11.946667 6.826666 20.48 1.706667 8.533333-1.706667 15.36-5.12 20.48z"'+
+                                                ' fill="#F10215" p-id="14484"></path> </svg></td></tr>')
+                        }
+                        
+                    })
+                }
+            });     
+            $.ajax({
+                type:'GET',
+                url:'/jiyu',
+                success:function(orders1){
+                    $.each($.parseJSON(orders1),function (i,order1) {
+                            $orders1.append( '<div class="waterfall__item"><a class=""><div class="qkxk_card idea-item"><div class="idea-item__content">'+
+                                        order1.jiyu+
+                                    '</div><div class="idea-item__info">'+
+                                        order1.qk+
+                                        '<br> </div></div></a></div>')
+                        })
+                        
+                        
+                    }
+                
+            })
+        })
+    </script>
+    <script src="JS/qkxk.js"></script>
+    <script src="JS/mdui.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+</body>
+
+</html>

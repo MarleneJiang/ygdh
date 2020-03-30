@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="Author" content="Noah">
+    <meta name="Keywords" content="中学,高级中学,导航">
+    <meta name="Description" content="宁波市鄞州高级中学的学生导航网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="css/normalize.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/mdui.min.css">
+    <link rel="stylesheet" href="CSS/shareman.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/qkxk.css">
+    <link rel="stylesheet" href="CSS/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1664784_fh6z1wn0uqp.css">
+    <script src="JS/jquery.min.js"></script>
+    <link rel="favicon" href="favicon.ico">
+    <title>鄞高导航</title>
+</head>
+
+<body class="mdui-color-white ">
+    <header class="header container-xl mdui-color-theme " mdui-headroom
+        style="border-radius: 0 0 15px 15px;max-width: 700px;">
+
+        <div class="header__main mdui-color-white mdui-ripple mdui-ripple-black">
+            <div class="logo" id="logo" style="margin-left:auto;margin-right: auto;"><img src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330145929.png"
+                    alt="logo" style="height:60px;" draggable="false">
+            </div>
+        </div>
+
+        <div class="header__menu mdui-color-theme">
+            <div class="menu">
+                <!---->
+                <div class="menu--horizontal ">
+                    <div id="headerHorizontalMenu" class="menu--horizontal__content ">
+                        <div class="menu--horizontal__content__item  menu--horizontal__content__item--active"><a
+                                href="/" class=""><i class="iconfont icon-iconfont icon-schedule"></i>
+                                首页
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a href="/develop.html" class=""></a><i
+                                class="iconfont icon-iconfont icon-post"></i>
+                            发展
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a class=""><i
+                                    class="iconfont icon-iconfont icon-bulb"></i>
+                                个性
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a class=""><i
+                                    class="iconfont icon-iconfont icon-work"></i>
+                                学习
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav class="sidebar layout-sidebar mdui-color-theme">
+        <div class="sidebar__container">
+            <div class="menu">
+                <div class="menu--vertical">
+                    <div class="menu--vertical__item menu--vertical__item--active">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-schedule"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            首页
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-post"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            发展
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-bulb"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            个性
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-work"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            学习
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="view" id="top">
+
+        <main class="main layout-main">
+            <div class="LayoutContainer" style="max-width:1800px;padding:0;">
+                <div class="blocker" style="height:40px;width:100%;">
+                    <!---->
+                </div>
+                <section class="information">
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            个人信息
+                            <span>personal information</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+
+                    <div class="mdui-container-fluid mdui-m-a-5">
+                        <div class="blog-list">
+
+                            <div class="qkxk_card blog-list__item qkxk_blog-item blog-list__item">
+                                <div class="qkxk_movie-item__header">
+                                    <div class="movie-item__header__poster mdui-ripple"><img data-src="{{photo}}"
+                                            src="{{photo}}" lazy="loaded" draggable="false"></div>
+                                    <img class="movie-item__header__background" data-src="{{photo}}" lazy="loaded"
+                                        draggable="false" src="{{photo}}">
+
+                                </div>
+                                <div class="blog-item__main mdui-float-left">
+                                    <div class="qkxk_movie-item__content__name"><i class="iconfont icon-user"
+                                            style="font-size: 2rem;"></i><a class="">
+                                            {{name}}
+                                            <!----></a></div>
+                                    <div class="qkxk_blocker" style="height: 30px; width: 100%;">
+                                        <div class="blocker__divider" style="width: 200px; height: 2px;"></div>
+                                    </div>
+                                    <div class="blocker" style="height: 10px; width: 100%;"></div><!-- 空行 -->
+                                    <div class="qkxk_blog-item__main__title"><i class="iconfont icon-qkxk-fenzucopy"
+                                            style="font-size: 1.3rem;"></i>个人</div>
+                                    <div class="qkxk_blocker" style="height: 10px; width: 100%;margin-bottom: 4px;">
+                                        <div class="blocker__divider" style="width: 100px; height: 1.5px;"></div>
+                                    </div>
+                                    <div class="qkxk_day-item__main">
+                                        <div class="day-item__main__info">
+                                            <div class="day-item__main__info__detail">
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '性别', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-pv_sex"></i>
+                                                    {{gender}} </div>
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '电话', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-dianhua"></i>
+                                                    {{phone}} </div>
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '家庭住址', position: 'top'}"><i
+                                                        class="iconfont icon-location"></i>
+                                                    {{address}}</div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="blocker" style="height: 8px; width: 100%;"></div><!-- 空行 -->
+                                    <div class="qkxk_blog-item__main__title"><i class="iconfont icon-qkxk-xuexiaoxinxi"
+                                            style="font-size: 1.3rem;"></i>学校</div>
+                                    <div class="qkxk_blocker" style="height: 10px; width: 100%;margin-bottom: 4px;">
+                                        <div class="blocker__divider" style="width: 100px; height: 1.5px;"></div>
+                                    </div>
+                                    <div class="qkxk_day-item__main">
+                                        <div class="day-item__main__info">
+                                            <div class="day-item__main__info__detail">
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '学籍辅号', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-_xuehao"></i>
+                                                    {{id}} </div>
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '学号', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-xuehao"></i>
+                                                    {{num}}</div>
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '班级', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-banji"></i>
+                                                    {{class}}</div>
+                                                <div class="day-item__main__info__detail__item"
+                                                    mdui-tooltip="{content: '选课', position: 'top'}"><i
+                                                        class="iconfont icon-qkxk-kecheng"></i>
+                                                    {{subject}}</div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 个人属性 -->
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            时间轴
+                            <span>timeline</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+
+                    <div class="timeline">
+
+
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+
+
+
+        <footer id="bottom" class="footer">
+            <div class="LayoutContainer footer__container" style="max-width:1800px;padding:0;">
+                <div class="footer__container__page">
+                    <div class="footer__container__page__item">
+                        关于
+                    </div>
+                    <div class="footer__container__page__item">
+                        开发日志
+                    </div>
+                    <div class="footer__container__page__item">
+                        暂无备案
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini mdui-fab-fixed" id="fullbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);"
+                onclick="toggleFullScreen()">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-quanping" style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini qkxk-fab-fixed2" id="topbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-rising " style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+
+
+
+        </footer>
+
+
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="JS/qkxk.js"></script>
+    <script src="JS/mdui.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            var $orders1 = $('.timeline');
+            var num = 1;
+            $.ajax({
+                type: 'GET',
+                url: '/timeline',
+                success: function (orders1) {
+                    $.each($.parseJSON(orders1), function (i, order1) {
+                        if (num % 2 == 0) {
+                            $orders1.append(
+                                '<div class="timeline__item"><div class="timeline__item__date "><div class="timeline__item__date__icon"><i class="iconfont icon-iconfont icon-calendar" style="color:#aaa;font-size:24px;"></i></div></div><div class="timeline__item__body"><div class="qkxk_card common-item "><div class="common-item__module">' +
+                                order1.module +
+                                '</div><div class="common-item__main"><div class="common-item__main__name">' +
+                                order1.time +
+                                '</div><div class="common-item__main__info">' +
+                                '<div class="qkxk_common-item__main__info__detail">' +
+                                order1.info + '</div></div></div>' +
+                                '<div class="common-item__image "><img src="' + order1
+                                .img + '"></div></div></div></div>');
+                            num = num + 1;
+                        } else {
+                            $orders1.append(
+                                '<div class="timeline__item"><div class="timeline__item__date "><div class="timeline__item__date__icon"><i class="iconfont icon-iconfont icon-calendar" style="color:#aaa;font-size:24px;"></i></div></div><div class="timeline__item__body"><div class="qkxk_card common-item common-item--right"><div class="common-item__module">' +
+                                order1.module +
+                                '</div><div class="common-item__main"><div class="common-item__main__name">' +
+                                order1.time +
+                                '</div><div class="common-item__main__info">' +
+                                '<div class="qkxk_common-item__main__info__detail">' +
+                                order1.info + '</div></div></div>' +
+                                '<div class="common-item__image "><img src="' + order1
+                                .img + '"></div></div></div></div>');
+                            num = num + 1;
+                        }
+
+
+                    })
+                    $orders1.append(
+                        '<div class="timeline__more mdui-ripple"><i class="iconfont icon-more" style="font-size:1.2rem;"></i></div>'
+                    )
+
+                }
+
+            })
+        })
+    </script>
+</body>
+
+</html>

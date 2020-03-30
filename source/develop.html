@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="Author" content="Noah">
+    <meta name="Keywords" content="中学,高级中学,导航">
+    <meta name="Description" content="宁波市鄞州高级中学的学生导航网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="never">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="css/normalize.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/mdui.min.css">
+    <link rel="stylesheet" href="CSS/shareman.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/qkxk.css">
+    <link rel="stylesheet" href="CSS/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1664784_fh6z1wn0uqp.css">
+    <script src="JS/jquery.min.js"></script> 
+    <link rel="favicon" href="favicon.ico">
+    <title>鄞高导航</title>
+</head>
+
+<body class="mdui-color-white ">
+    <header class="header container-xl mdui-color-theme " mdui-headroom
+        style="border-radius: 0 0 15px 15px;max-width: 700px;">
+
+        <div class="header__main mdui-color-white mdui-ripple mdui-ripple-black">
+            <div class="logo" id="logo" style="margin-left:auto;margin-right: auto;"><img src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330145929.png"
+                    alt="logo" style="height:60px;" draggable="false">
+            </div>
+        </div>
+
+        <div class="header__menu mdui-color-theme">
+            <div class="menu">
+                <!---->
+                <div class="menu--horizontal ">
+                    <div id="headerHorizontalMenu" class="menu--horizontal__content ">
+                        <div class="menu--horizontal__content__item  menu--horizontal__content__item--active"><a
+                                href="/" class=""><i class="iconfont icon-iconfont icon-schedule"></i>
+                                首页
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a href="/develop.html" class=""><i
+                                    class="iconfont icon-iconfont icon-post"></i>
+                                发展
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a  class=""><i
+                                    class="iconfont icon-iconfont icon-bulb"></i>
+                                个性
+                            </a></div>
+                        <div class="menu--horizontal__content__item"><a  class=""><i
+                                    class="iconfont icon-iconfont icon-work"></i>
+                                学习
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav class="sidebar layout-sidebar mdui-color-theme">
+        <div class="sidebar__container">
+            <div class="menu">
+                <div class="menu--vertical">
+                    <div class="menu--vertical__item ">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-schedule"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            首页
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item menu--vertical__item--active">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-post"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            发展
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-bulb"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            个性
+                        </div>
+                    </div>
+                    <div class="menu--vertical__item">
+                        <div class="menu--vertical__item__icon"><i class="iconfont icon-iconfont icon-work"
+                                style="font-size:24px;"></i></div>
+                        <div class="menu--vertical__item__name web-font">
+                            学习
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="view" id="top">
+
+        <main class="main layout-main">
+            <div class="LayoutContainer" style="max-width:1800px;padding:0;">
+
+                <nav>
+                    <div class="category-box"><a href="/develop.html"
+                            class="category-box__item nuxt-link-exact-active nuxt-link-active category-box__item--active">
+                            导航
+                        </a> <a href="/info.html" class="category-box__item">
+                            信息
+                        </a></div>
+                </nav>
+                <div class="blocker" style="height:20px;width:100%;">
+                    <!---->
+                </div>
+                <section>
+                    <div class="bd-example " style="-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);
+                    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);">
+                        <div id="Captions" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#Captions" data-slide-to="0" class="active"></li>
+                                <li data-target="#Captions" data-slide-to="1"></li>
+                                <li data-target="#Captions" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active" data-link="https://ningbo.xueanquan.com/">
+                                    <img class="d-block w-100" src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330150032.jpg" data-holder-rendered="true">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h3>安全教育平台</h3>
+                                        <p>We are building a scientific, normal and information-based school safety education system for schools and children.</p>
+                                    </div> -->
+                                </div>
+                                <div class="carousel-item " data-link="https://oj.nbyg.net/">
+                                    <img class="d-block w-100" src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330150043.jpg" data-holder-rendered="true">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h3>YGOJ编程竞赛</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div> -->
+                                </div>
+                                <div class="carousel-item" data-link="https://www.zjzs.net/moban/index/index.html">
+                                    <img class="d-block w-100" src="https://cdn.jsdelivr.net/gh/JiangNoah/ImgHosting/img/20200330145939.jpg" data-holder-rendered="true">
+                                    <!-- <div class="carousel-caption d-none d-md-block">
+                                        <h3>浙江考试院</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#Captions" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#Captions" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <div class="blocker" style="height:40px;width:100%;">
+                    <!---->
+                </div>
+                <section>
+
+                    <div class="nameplate">
+                        <div class="nameplate__title web-font">
+                            翼生涯
+                            <span>Wing career</span></div>
+                        <div class="nameplate__action"></div>
+                    </div>
+                    <div class="blocker auto-blocker" style="height:1rem;width:100%;"></div>
+                    <div>
+                        <div class="card m-4 ysy" 
+                            style="border: 0rem;background-image: linear-gradient( 200deg, #ABDCFF 10%, #0396FF 100%);">
+                            <img class="mdui-float-right" style="width: 16rem;position: fixed;right: 0;bottom: 0;"
+                                src="http://s.yishengya.cn/public/site/images/2018112714_2.png" alt="">
+                            <div class="card-body  text-white " style="position: relative;">
+                                <h4 class="card-title font-weight-bold">生涯测评</h4>
+                                <p class="card-text mdui-typo">定位多维职业生涯评估，帮助学生选择合适的专业领域。<br />Localization
+                                    multidimensional professional career evaluation, help students to choose the
+                                    appropriate professional field.
+                                </p>
+                                <div class="blocker" style="height:3rem;width:100%;"></div>
+                            </div>
+
+                        </div>
+                        <div class="card m-4 ysy" 
+                            style="border: 0rem;background-image: linear-gradient( 200deg, #FEB692 10%, #EA5455 100%);">
+                            <img class="mdui-float-right" style="width: 12rem;position: fixed;right: 0;bottom: 0;"
+                                src="http://s.yishengya.cn/public/site/images/2018112801_2.png" alt="">
+                            <div class="card-body text-white " style="position: relative;">
+                                <h4 class="card-title font-weight-bold">学职信息</h4>
+                                <p class="card-text mdui-typo">全校最新专业招聘信息数据库。<br />The latest professional job
+                                    information database of the whole university.
+                                </p>
+                                <div class="blocker" style="height:3rem;width:100%;"></div>
+                            </div>
+
+                        </div>
+                        <div class="card m-4 ysy" 
+                            style="border: 0rem;background-image: linear-gradient( 200deg, #81FBB8 10%, #28C76F 100%);">
+                            <img class="mdui-float-right" style="width: 16rem;position: fixed;right: 0;bottom: 0;"
+                                src="http://s.yishengya.cn/public/site/images/2018112817_2.png" alt="">
+                            <div class="card-body text-white " style="position: relative;">
+                                <h4 class="card-title font-weight-bold">选科决策</h4>
+                                <p class="card-text mdui-typo">帮助学生在选择问题上提出建议，衡量他们应该选择哪些学科，使他们的职业生涯能够得到有效的规划。<br />To
+                                    help students in the selection of the issue of advice, measure what subjects they
+                                    should choose, so that their career can be effective planning.
+                                </p>
+                                <div class="blocker" style="height:3rem;width:100%;"></div>
+                            </div>
+
+                        </div>
+                        <div class="card m-4 ysy" 
+                            style="border: 0rem;background-image: linear-gradient( 200deg, #FDEB71 10%, #F8D800 100%);">
+                            <img class="mdui-float-right" style="width: 20rem;position: absolute;;right: 0;bottom: 0;"
+                                src="http://s.yishengya.cn/public/site/images/2018112911_2.png" alt="">
+                            <div class="card-body text-white " style="position: relative;">
+                                <h4 class="card-title font-weight-bold">过程激励</h4>
+                                <p class="card-text mdui-typo">根据你之前的学习情况，推荐最适合你的大学，帮助你设定大学目标。<br />Based on your
+                                    previous study, recommend the most suitable university to help you set your college
+                                    goals.
+                                </p>
+                                <div class="blocker" style="height:3rem;width:100%;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- <form id="yishengya_form" method="post" target="_blank"
+                        action="http://www.yishengya.cn/authentication/index">
+                        <input type="hidden" id="signstr" name="signstr" value="">
+                        <input type="hidden" id="btn" name="btn" value="scwx_cp_pic">
+                        <input type="hidden" id="xtimestamp" name="xtimestamp" value="">
+                        <input type="hidden" id="xuid" name="xuid" value="160208080001">
+                        <input type="hidden" id="survey_type" name="survey_type" value="3">
+                    </form> -->
+
+
+                </section>
+
+            </div>
+        </main>
+
+
+
+
+
+        <footer id="bottom" class="footer">
+            <div class="LayoutContainer footer__container" style="max-width:1800px;padding:0;">
+                <div class="footer__container__page">
+                    <div class="footer__container__page__item">
+                        关于
+                    </div>
+                    <div class="footer__container__page__item">
+                        开发日志
+                    </div>
+                    <div class="footer__container__page__item">
+                        暂无备案
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini mdui-fab-fixed" id="fullbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);"
+                onclick="toggleFullScreen()">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-quanping" style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+            <button class="mdui-fab mdui-ripple mdui-color-theme-accent  mdui-fab-mini qkxk-fab-fixed2" id="topbtn"
+                style="outline:none;-webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .06);box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.123);">
+                <!-- 默认显示的图标 -->
+                <i class="iconfont icon-qkxk-rising " style="font-size: larger;"></i>
+
+                <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+
+            </button>
+
+
+
+        </footer>
+
+    </div>
+    <script>
+        // function openYishengyaWeb(btn) {    //由于跨域安全问题无法使用
+        // var frm = $('#yishengya_form');
+        // $.ajax({
+        //     url: "/ysy",
+        //     type: 'post',
+        //     data: {
+        //     user_name: "user_name"
+        //     },
+        //     async: false,
+        //     success: function (strValue) {
+        //       var rd = JSON.parse(strValue);
+        //       console.log(rd);
+        //       if (rd.result == "T") {
+        //         frm.find('#signstr').val(rd.signstr);
+        //         frm.find('#xtimestamp').val(rd.timestamp);
+        //         frm.find('#btn').val(btn);
+        //         frm.find('#xuid').val(rd.xuid);
+        //         // alert(rd.signstr);
+        //         frm.submit();
+        //       }
+        //       else {
+        //         alert(rd.resMsg);
+        //       }
+        //     }
+        // });
+        // }
+        $(".ysy").click(function (event) {
+                    mdui.snackbar({
+                        message: ' <i class="iconfont icon-tishi " /> 因安全问题，请自行登录！',
+                        position: 'right-top'
+                    });
+                    setTimeout(function () {
+                        window.open("http://www.yishengya.cn/backend/page#/","_blank"); 
+                        
+                    }, 1000);
+                });
+
+        $(".carousel-item").click(function(event){
+            window.open(this.dataset.link,"_blank"); 
+        })
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="JS/qkxk.js"></script>
+    <script src="JS/mdui.min.js"></script> 
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+</body>
+
+</html>
